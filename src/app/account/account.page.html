@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- displays BountyByBree pattern from assets -->
+    <img src="/assets/images/BBB colours.jpg">
+    <!-- back button takes user to last screen, automatically knows which page user was last on -->
+    <ion-buttons slot="start">
+     <ion-back-button text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="ion-text-center"><ion-text color="light"><h1>Account Details</h1></ion-text>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <!-- displays chosen profile pic -->
+        <img src="/assets/images/BountyByBreeAccount.png">
+        <!-- <div class="images-wrapper">
+          <div class="pick-single-image" *ngFor="let image of imgRes">
+            <img src="{{image}}" alt="" srcset=""> -->
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <!-- users will be able to click button, to choose and display profile picture image -->
+      <!-- (click)="imagePicker()" -->
+      <ion-item class="box">
+        <ion-button size="small" expand="round" color ="primary">update profile pic</ion-button>
+      </ion-item>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-card>
+        <!-- user account details which was input at create account screen --> 
+          <ion-item>
+            <ion-text color="light">Date of Birth: 17/07/2001</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text color="light">Phone number: 0406 022 499</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text color="light">Password: ******</ion-text>
+          </ion-item>
+        </ion-card> 
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <!-- user clicks back to catalogue, which navigates them to catalogue screen -->
+        <ion-item>
+          <ion-button (click)="cataloguepage()" size="medium" expand="round" color ="secondary"> back to catatlogue </ion-button>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+   <!-- displays BountyByBree pattern from assets -->
+   <img src="/assets/images/BBB colours.jpg">
+  </ion-toolbar>
+</ion-footer>

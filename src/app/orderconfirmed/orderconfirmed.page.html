@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- displays BountyByBree pattern from assets -->
+    <img src="/assets/images/BBB colours.jpg">
+    <!-- back button takes user to last screen, automatically knows which page user was last on -->
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="ion-text-center"><ion-text color="light"><h1>Order Confirmed!</h1></ion-text>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <!-- displays map -->
+      <img src="/assets/images/map.png">
+      <!--<script scr="http://maps.googleapis.com/maps/api/js?key=AIzaSyBACli23bM4DoQjlDRWznG5M8xX6ZV4eVk"-->
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-text color="light">Estimated delivery: 5 days</ion-text>
+        </div>
+      </ion-col>  
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <!-- user clicks account button, which naviagtes them to account screen -->
+      <ion-col>
+        <ion-item>
+          <ion-button (click)="accountpage()" size="medium" expand="round" color ="secondary"> account </ion-button>
+        </ion-item>
+      </ion-col> 
+      <ion-col></ion-col> 
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <!-- user clicks back to catalogue, which naviagtes them to catalogue screen -->
+        <ion-item>
+          <ion-button (click)="cataloguepage()" size="medium" expand="round" color ="secondary"> back to catatlogue </ion-button>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- displays BountyByBree pattern from assets -->
+    <img src="/assets/images/BBB colours.jpg">
+  </ion-toolbar>
+</ion-footer>

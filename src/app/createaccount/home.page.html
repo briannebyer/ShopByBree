@@ -1,0 +1,72 @@
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <!-- displays ShopByBree logo from assets -->
+          <img src="/assets/images/ShopByBree.png">
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <!-- user inputs date of birth -->
+        <ion-card>
+          <ion-accordion-group>
+            <ion-accordion value="start">
+              <ion-item class="box" color="light" slot="header">
+              <ion-label>DOB</ion-label>
+              <ion-note slot="end" id="datetimeValue"></ion-note>
+              </ion-item>
+              <ion-datetime
+              id="datetime"
+              slot="content"
+              display-format="MMMM YY"
+              min="1920-01-01"
+              max="2004-01-21"
+              value="2001-07-15T13:47:20.789">
+              </ion-datetime>
+            </ion-accordion>
+          </ion-accordion-group>
+        </ion-card>
+       </ion-col>
+      </ion-row>
+    <ion-row>
+      <!--  user inputs phone number -->
+      <ion-card>
+        <ion-item class="box" color="light">
+          <ion-input type="tel" pattern="[0-9]*" maxlength="10" placeholder="Phone number" [(ngModel)]="phonenumber" name="phonenumber"></ion-input>
+        </ion-item>  
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <!-- user inputs password -->
+      <ion-card> 
+        <ion-item class="box" color="light"> 
+          <ion-input type="text" placeholder="Password" [(ngModel)]="password" name="password"></ion-input>
+        </ion-item>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <!-- user can opt in for text messages from BountyByBree -->
+      <ion-item>
+        <ion-text color="light"><p>Receive text messages about BountyByBree sales and future events!</p></ion-text>
+        <ion-checkbox class="box" slot="start" color ="secondary" value="opt in" checked></ion-checkbox>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <!-- user clicks button, which creates account (with inputs being displayed later in account page) and navigates them to catalogue screen -->
+        <ion-item>
+          <ion-button (click)="cataloguepage()" size="medium" expand="round" color ="secondary"> create account </ion-button>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+

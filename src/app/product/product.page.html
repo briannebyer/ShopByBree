@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- displays BountyByBree pattern from assets -->
+    <img src="/assets/images/BBB colours.jpg">
+    <!-- back button takes user to product screen, automatically knows which page user was last on -->
+    <ion-buttons slot="start">
+      <ion-back-button text="" colour="primary" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- image of product, found in assets -->
+  <img src="/assets/images/products/product1.png">
+  <!-- text regarding price and product description -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-text color="light"><h1>$$$</h1></ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <ion-text color="light">Information about this product.</ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <!-- user clicks add to cart button, which naviagtes them to shopping cart screen -->
+        <ion-item>
+          <ion-button (click)="shoppingcartpage()" size="medium" expand="round" color ="secondary"> add to cart </ion-button>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- displays BountyByBree pattern from assets -->
+    <img src="/assets/images/BBB colours.jpg">
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+     <!-- displays BountyByBree pattern from assets -->
+     <img src="/assets/images/BBB colours.jpg">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- uses ion grid structure to align each product available to purchase-->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text color="light"><h1>ShopByBree</h1></ion-text>
+      </ion-col>
+      <ion-col>
+        <!-- displays custom shopping cart icon]from assets -->
+        <img src="/assets/images/SmallAccount.png" (click)="accountpage()">
+      </ion-col>
+      <ion-col>
+        <!-- displays custom shopping cart icon]from assets -->
+        <img src="/assets/images/BountyByBreeCart.png" (click)="shoppingcartpage()">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="ion-text-center">
+          <!-- displays product 1 image from assets and once clicked, takes user to product screen -->
+          <img src="/assets/images/products/product1.png" (click)="productpage()">
+          <ion-text color="light">$$$</ion-text>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="ion-text-center">
+          <!-- displays product 2 image from assets and once clicked, takes user to product screen -->
+          <img src="/assets/images/products/product2.png" (click)="productpage()">
+          <ion-text color="light">$$$</ion-text>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="ion-text-center">
+          <!-- displays product 3 image from assets and once clicked, takes user to product screen -->
+          <img src="/assets/images/products/product3.png" (click)="productpage()">
+          <ion-text color="light">$$$</ion-text>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="ion-text-center">
+          <!-- displays product 4 image from assets and once clicked, takes user to product screen -->
+          <img src="/assets/images/products/product4.png" (click)="productpage()">
+          <ion-text color="light">$$$</ion-text>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card class="ion-text-center">
+          <!-- displays product 5 image from assets and once clicked, takes user to product screen -->
+          <img src="/assets/images/products/product5.png" (click)="productpage()">
+          <ion-text color="light">$$$</ion-text>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+       <ion-card class="ion-text-center">
+          <!-- displays product 4 image from assets and once clicked, takes user to product screen -->
+          <img src="/assets/images/products/product6.png" (click)="productpage()">
+          <ion-text color="light">$$$</ion-text>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+     <!-- displays BountyByBree pattern from assets -->
+     <img src="/assets/images/BBB colours.jpg">
+  </ion-toolbar>
+</ion-footer>

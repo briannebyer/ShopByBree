@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- displays BountyByBree pattern from assets -->
+    <img src="/assets/images/BBB colours.jpg">
+    <!-- back button takes user to last screen, automatically knows which page user was last on -->
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- uses ion grid structure -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="ion-text-center"><ion-text color="light"><h1>Shopping Cart</h1></ion-text>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text color="light">Item</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text color="light">Price</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text color="light">Action</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img src="/assets/images/products/product1.png">
+      </ion-col>
+      <ion-col>
+        <ion-text color="light">$$$</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button color="secondary">remove</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text color="light">Total cost: $$$</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <!-- user clicks confirm order button, which naviagtes them to order confirmed screen -->
+        <ion-item>
+          <ion-button (click)="orderconfirmedpage()" size="medium" expand="round" color ="secondary"> confirm order </ion-button>
+        </ion-item>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+   <!-- displays BountyByBree pattern from assets -->
+   <img src="/assets/images/BBB colours.jpg">
+  </ion-toolbar>
+</ion-footer>

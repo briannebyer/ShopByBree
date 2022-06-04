@@ -1,0 +1,8 @@
+{
+  "name": "ShopByBree",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
