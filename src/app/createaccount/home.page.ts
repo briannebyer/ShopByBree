@@ -12,8 +12,9 @@ import { FormsModule } from '@angular/forms';
 export class HomePage {
 
 /* inital value of inputs on create account screen, binded through ngModel */
-phonenumber:number = 0 ;
-password:string = '';
+dateofbirth:any;
+phonenumber:number;
+password:string;
 
 /* inject router so that is it available in the class */
   constructor(private router: Router) {}
