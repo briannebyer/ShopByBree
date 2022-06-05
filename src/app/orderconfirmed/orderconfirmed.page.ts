@@ -13,7 +13,8 @@ declare let google: any;
 export class OrderconfirmedPage implements OnInit {
   @ViewChild('map',{static:true}) mapElement;
   map: any;
-  constructor() {}
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
     console.log('ng OnInit MapPage');
@@ -41,7 +42,7 @@ export class OrderconfirmedPage implements OnInit {
         });
        
         let infoWindow = new google.maps.InfoWindow({
-          content: '<div> <h3 style="color:blue" >2701ICT Headquarters </h3> </div>'
+          content: '<div> <h4>Delivery Address</h4> </div>'
         });
       
        google.maps.event.addListener(marker, 'click', () => {
@@ -52,11 +53,17 @@ export class OrderconfirmedPage implements OnInit {
     } else {
       alert('Geolocation not supported');
     }
-
     
-  
-    
-  
   }
+      /* function navigates user to account screen */
+      accountpage(){
+        this.router.navigate(['/account'])
+      }
+    
+      /* function takes user to catalogue screen */
+      cataloguepage(){
+        this.router.navigate(['/catalogue'])
+      }
+      
 
 }
