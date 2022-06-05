@@ -1,0 +1,9 @@
+//  set height and width of google maps (users location)
+#map {
+    width: 100%;
+    height: 75%;
+    top: 35%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
