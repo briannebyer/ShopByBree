@@ -1,11 +1,29 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>shippingdetails</ion-title>
+    <!-- displays BountyByBree pattern from assets -->
+    <img src="/assets/images/BBB colours.jpg">
+    <!-- back button takes user to last screen, automatically knows which page user was last on -->
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card class="ion-text-center"><ion-text color="light"><h1>Shipping Details</h1></ion-text></ion-card>
   <div class="ion-text-center">
     <ion-text color="light">Estimated delivery: 5 days</ion-text>
   </div>
+  <div class="ion-text-center">
+    <ion-text color="light">Please contact customer service if delivery address is incorrect</ion-text>
+  </div>
+  <!-- <ion-input type="text"  id ="lat" name = "some_name" value="{{sub.lat}}">display</ion-input> -->
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- displays BountyByBree pattern from assets -->
+    <img src="/assets/images/BBB colours.jpg">
+  </ion-toolbar>
+</ion-footer>

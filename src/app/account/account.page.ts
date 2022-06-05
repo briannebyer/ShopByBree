@@ -30,7 +30,8 @@ export class AccountPage {
     this.options = {
       width: 200,
       quality: 30,
-      outputType: 1
+      // maximum images to choose for profile pic
+      number: 1
     };
 
     this.imgRes = [];

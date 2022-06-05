@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 /* must import router module to navigate pages */
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 //  to be able to reference google API
 declare let google: any;
@@ -14,8 +14,10 @@ export class OrderconfirmedPage implements OnInit {
   @ViewChild('map',{static:true}) mapElement;
   map: any;
 
+  // able to navigate between pages
   constructor(private router: Router) { }
 
+  // finds users location and places marker
   ngOnInit() {
     console.log('ng OnInit MapPage');
     let latLng = new google.maps.LatLng(-34.9290, 138.6010);
@@ -42,11 +44,14 @@ export class OrderconfirmedPage implements OnInit {
         });
        
         let infoWindow = new google.maps.InfoWindow({
-          content: '<div> <h4>Delivery Address</h4> </div>'
+          content:'<div>view details</div>'
+          
         });
       
+        // when marker is clicked, navigates to shipping details
        google.maps.event.addListener(marker, 'click', () => {
           infoWindow.open(this.map, marker);
+          this.shippingdetails(pos.lat,pos.lng)
         });
 
       });
@@ -63,6 +68,12 @@ export class OrderconfirmedPage implements OnInit {
       /* function takes user to catalogue screen */
       cataloguepage(){
         this.router.navigate(['/catalogue'])
+      }
+
+      /* function takes user to shipping details, showing the default lat and lng */
+      shippingdetails(lat,lng){
+        // this.router.navigate(['/shippingdetails', lat, lng])
+        this.router.navigate(['/shippingdetails'])
       }
       
 
