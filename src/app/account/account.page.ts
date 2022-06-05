@@ -20,6 +20,11 @@ export class AccountPage {
   cataloguepage(){
     this.router.navigate(['/catalogue'])
   }
+
+  /* function takes user to tailored experience screen */
+  tailoredpage(){
+    this.router.navigate(['/tailoredexperience'])
+  }
   // function takes user to image picker
   imagePicker(){
     this.options = {
