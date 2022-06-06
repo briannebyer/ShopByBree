@@ -11,19 +11,22 @@
 
 
 <ion-content>
-    <input #numChart placeholder="Number for Chart">
-    <input #lab placeholder="label">
-  
-    <button (click)="numPush(numChart.value, lab.value)">Push Data</button>
-  
     <ion-card>
-      <ion-card-header>
-        Chart Bar
-      </ion-card-header>
+      <ion-text color="light"><h1>Pie Chart</h1></ion-text>
       <ion-card-content>
-        <canvas #healthCanvas height=300></canvas>
+        <canvas #tailored height=300></canvas>
       </ion-card-content>
     </ion-card>
+    <!-- user input for pie chart -->
+    <ion-item color="light">
+      <ion-input #numChart type="tel" pattern="[0-9]*" maxlength="1" placeholder="Type number from 1 to 10" ></ion-input>
+    </ion-item> 
+    <ion-item class="box" color="light"> 
+      <ion-input #lab type="text" placeholder="Wanted jewellery type"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-button (click)="numPush(numChart.value, lab.value)" size="medium" expand="round" color ="secondary">send preference</ion-button>
+    </ion-item>
   </ion-content>
 
   <ion-footer>

@@ -14,10 +14,8 @@ export class TailoredexperiencePage implements OnInit {
 
   numList = [];
   labelList = [];
-  @ViewChild('healthCanvas',{static:true}) healthCanvas;
+  @ViewChild('tailored',{static:true}) tailored;
   chart: any;
-
-  
 
   options = {
     scales: {
@@ -30,29 +28,35 @@ export class TailoredexperiencePage implements OnInit {
 data = {
   labels: this.labelList,
   datasets: [{
-    label: '# of heart rate',
+    label: 'Jewellery Type',
     data: this.numList,
+    // shades of pink for each different jewellery type
     backgroundColor: [
+      'rgba(251, 231, 239, 1)',
+      'rgba(110, 48, 75, 1)',
+      'rgba(190, 86, 131, 1)',
+      'rgba(219, 10, 91, 1)',
+      'rgba(246, 36, 86, 1)'
     ]
   }]
 }
 
-
+// creates chart
   ngOnInit() {
-    this.chart = new chart(this.healthCanvas.nativeElement, {
-      type: 'bar',
+    this.chart = new chart(this.tailored.nativeElement, {
+      type: 'pie',
       data: this.data,
-      options: this.options
     });
   }
    
+  // once user chooses number and type, updates pie chart with preference
   numPush(num, lab) {
     console.log(num,lab)
     this.labelList.push(lab);
     this.numList.push(num);
     this.data.labels = this.labelList;
     this.data.datasets[0].data = this.numList;
-    this.data.datasets[0].backgroundColor.push(  "rgba(255, 99, 132, 0.2)");
+    this.data.datasets[0].backgroundColor.push();
     this.chart.update();
   }
 }
